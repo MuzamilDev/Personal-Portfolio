@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Form</title>
+    <style type="text/css">
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: lightgreen;
+        }
+        
+        form {
+            margin-top: 40px;
+            margin-left: 40%;
+        }
+        
+        h1 {
+            margin-left: 25%;
+            text-align: center;
+            align-items: center;
+            background-color: red;
+            width: 50%;
+        }
+        
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        
+        .age {
+            margin-left: 20px;
+        }
+        
+        .role {
+            margin-left: 17px;
+        }
+        
+        textarea {
+            margin-left: 10px;
+        }
+        
+        input[type=submit] {
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Survey Form</h1>
+    <form>
+        <textfield>
+            <label for id="name" class="required">Name</label>
+            <input type="text" id="name" placeholder="write your name here" required>
+            <br><br>
+            <label for id="email" class="required">Email</label>
+            <input type="text" id="email" placeholder="your email here" required>
+            <br><br>
+            <label for id="age" class="age" class="required">Age</label>
+            <input type="text" id="age">
+            <br><br>
+        </textfield>
+
+        <textfield>
+            <label for="role-choice" class="role">Role</label>
+            <input list="role" id="role-choice" name="role-choice" />
+            <datalist id="role">
+                <option value="Student">
+                <option value="Employee">
+                <option value="Professional">
+            </datalist>
+        </textfield>
+        <br>
+        <br>
+
+        <textfield>
+            <legend>Recommend Free <br>Code camp to friends</legend>
+            <br>
+            <label for="Rbutton">
+            <input type="radio" id="Rbuttons" name="status"> Definitely
+            </label>
+            <br>
+            <label for="Rbuttons">
+            <input type="radio" id="Rbuttons" name="status"> Maybe
+            </label>
+            <br>
+            <label FOR="Rbuttons">
+            <input type="radio" id="Rbuttons" name="status"> No
+            </label>
+
+        </textfield>
+        <br>
+        <br>
+        <textfield>
+            <legend>Things should <br>be Improved</legend>
+            <br>
+            <label for="check">
+            <input type="checkbox" id="check">Front-End
+            </label>
+            <br>
+            <label for="check">
+            <input type="checkbox" id="check">Back-End
+            </label>
+            <br>
+            <label for="check">
+            <input type="checkbox" id="check">Data Visualization
+            </label>
+            <br>
+            <label for="check">
+                <input type="checkbox" id="check">Video
+            </label>
+            <br>
+            <label for="check">
+                <input type="checkbox" id="check">Artificial Intelligence
+            </label>
+            <br>
+            <br>
+        </textfield>
+        <br>
+        <br>
+        <textfield>
+            <label for="textarea">
+            <textarea rows="5" column="120" id="textarea">Comments
+            </textarea>
+            </label>
+        </textfield>
+        <br>
+        <br>
+        <input type="submit" id="submit">
+
+    </form>
+</body>
